@@ -1,0 +1,142 @@
+* {
+    font-family: arial;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.header {
+    height: 15em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2em;
+}
+.header > * {
+    margin: 5px;
+}
+.header h1 {
+    font-size: 90px;
+}
+.header div {
+    display: flex;
+}
+.header div > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    min-width: 5em;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+.LOST {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 10em;
+    font-weight: bold;
+    color: darkred;
+    background-color: rgba(255,255,255,0);
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5em;
+    height: 5em;
+    border: 1px solid firebrick;
+    background-color: antiquewhite;
+    font-weight: bolder;
+}
+
+.container.bigsquare {
+    width: 25em;
+    padding: 0.2em 0.2em 0.2em 1.3em;
+    border: 2px solid darkslategrey;
+    border-radius: 0.5em;
+    background-color: darkslategrey;
+
+}
+
+.row .lilsquare {
+    width: 90px;
+    height: 90px;
+    margin: 0.2em 0.2em 0.2em 0.2em;
+    border: 2px solid darkslategrey;
+    border-radius: 0.5em;
+    background-color: lightgray;
+}
+
+.num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-weight: bolder;
+    border-radius: 0.3em;
+}
+
+.num-2 {background-color: floralwhite;}
+.num-4 {background-color: cadetblue;}
+.num-8 {background-color: lightseagreen;}
+.num-16 {background-color: lightsalmon;}
+.num-32 {background-color: orange;}
+.num-64 {background-color: darkorange;}
+.num-128 {background-color: lightgreen;}
+.num-256 {background-color: green;}
+.num-512 {background-color: darkgreen; color: white;}
+.num-1024 {background-color: brown; color: white;}
+.num-2048 {background-color: darkred; color: white;}
+.num-4096 {background-color: midnightblue; color: white;}
+.num-8192 {background-color: darkblue; color: white;}
+.num-16384 {background-color: blue; color: white;}
+.num-32768 {background-color: goldenrod; color: white;}
+.num-65536 {background-color: gold; color: white;}
+.num-131072 {background-color: darkmagenta; color: white;}
+.num-262144 {background-color: magenta; color: white;}
+.num-524288 {background-color: lime; color: white;}
+.num-1048576 {background-color: lawngreen; color: white;}
+.num-2097152 {background-color: chocolate; color: white;}
+.num-4194304 {background-color: fuchsia; color: white;}
+.num-8388608 {background-color: crimson; color: white;}
+.num-16777216 {background-color: deepskyblue; color: white;}
+.num-33554432 {background-color: lightskyblue; color: white;}
+.num-67108864 {background-color: mediumspringgreen; color: white;}
+.num-134217728 {background-color: springgreen; color: white;}

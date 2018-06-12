@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Paint</title>
+    <link href="css/styleshit.css" rel="stylesheet">
+    <script src="js/jQuery/jquery-3.3.1.min.js"></script>
+    <!--<script src="js/my_paint.js"></script>-->
+    <!--<script src="js/test2.js"></script>-->
+    <script src="js/test3.js"></script>
+</head>
+<body>
+    <header class="flex-center-center">
+        <h1>My Paint</h1>
+    </header>
+
+    <div id="sidebar-left" class="sidebar sidebar-left flex-reverse transition">
+        <div class="height-100 flex-center-center border-left collapse_sidebar" data-target="sidebar-left" data-value="0">
+            <p><<</p>
+        </div>
+        <div class="flex-column childMargin commands transition">
+
+            <div class="flex-column flex-center-center">
+                <label for="size"><p>Size (<span id="sizeValue">5</span>px)</p></label>
+                <input type="range" min="1" max="150" value="5" class="slider" id="size">
+            </div>
+            <div>
+                <input type="button" id="draw" value="draw">
+                <input type="button" id="rectangle" value="rectangle">
+                <input type="button" id="circle" value="circle">
+            </div>
+            <div>
+                <label for="color">Color : </label>
+                <input type="color" id="color" name="color">
+            </div>
+            <div>
+                <input type="checkbox" id="fill">
+                <label for="fill">Fill</label>
+            </div>
+            <div>
+                <input type="radio" id="link" name="line">
+                <label for="link">Point To Point</label>
+            </div>
+            <div>
+                <input type="radio" id="line" name="line">
+                <label for="line">Line</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="eraser" value="Eraser">
+                <label for="eraser">Eraser</label>
+            </div>
+
+            <div>
+                <div>
+                    <h4>Symmetry</h4>
+                </div>
+                <div>
+                    <input type="checkbox" id="symetricX">
+                    <label for="symetricX">Horizontal</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="symetricY">
+                    <label for="symetricY">Vertical</label>
+                </div>
+            </div>
+
+            <input type="button" id="eraseAll" value="Erase All">
+
+            <input type="button" id="addLayer" value="Add Layer">
+
+            <a href="#" class="button" id="download" download="my-file-name.png">Download</a>
+        </div>
+    </div>
+
+    <div id="container" class="flex-center">
+        <div id="canvasContainer" class="mainContent">
+            <canvas id="paint-1" class="visible" width='1000' height='700'></canvas>
+        </div>
+    </div>
+
+    <div class="sidebar sidebar-right flex transition" id="sidebar-right">
+        <div class="height-100 flex-center-center border-right collapse_sidebar" data-target="sidebar-right" data-value="1">
+            <p>>></p>
+        </div>
+        <div class="layers transition">
+            <div class="flex-center-center">
+                <h2>Layers</h2>
+            </div>
+            <div id="layerContainer" class="flex-column flex-center-center">
+                <div class="canvasLayer" id="layer-1">
+                    <h3>layer 1</h3>
+                    <div class="float-left">
+                        <div>
+                            <input type="radio" name="active" data-target="paint-1" id="activeLayer-1" class="activeLayers" checked>
+                            <label for="activeLayer-1">Active</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="see-1" class="seeLayers" data-target="paint-1" checked>
+                            <label for="see-1">Visible</label>
+                        </div>
+                        <button type="button" class="moveLayers" data-target="layer-1" value="up">Up</button>
+                        <button type="button" class="moveLayers" data-target="layer-1" value="down">Down</button>
+                    </div>
+                    <input type="button" class="removeLayers" data-target="paint-1" value="remove">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>2048</title>
+	<link rel="stylesheet" type="text/css" href="2048.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="jquery-3.2.1.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<header class="header">
+	<h1>2048</h1>
+	<div>
+		<div class="score">
+			<h2>score</h2>
+		</div>
+		<select class="size">
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+		</select>
+
+		<select class="difficulty">
+			<option value="1">normal</option>
+			<option value="2">hard</option>
+			<option value="3">very hard</option>
+			<option value="4">really hard</option>
+			<option value="5">go big (easy)</option>
+			<option value="6">go bigger (hard)</option>
+			<option value="7">burn yourself (very hard)</option>
+		</select>
+	</div>
+</header>
+
+
+<div class="container bigsquare">
+</div>
+
+<div class="LOST"></div>
+
+	<script src="2048.js"></script>
+</body>
+</html>

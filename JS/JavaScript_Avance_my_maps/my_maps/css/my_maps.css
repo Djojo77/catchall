@@ -1,0 +1,27 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+    height: 600px;
+    width: 800px;
+    border: 1px solid black;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.margin-1em {
+    margin: 1em;
+}
+
+.flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}

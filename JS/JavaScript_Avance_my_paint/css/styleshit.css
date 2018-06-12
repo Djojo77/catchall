@@ -1,0 +1,222 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    line-height: 1;
+    font-family: Arial;
+    background-color: white;
+    /*background: url("../assets/background2.jpg") no-repeat;*/
+    /*background-size: 100% 100%;*/
+}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+header {
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding: 1em 0 1em 0;
+    box-shadow: 0px 2px 7px rgba(0,0,0,0.1);
+    background-color: rgb(255, 255, 255);
+}
+
+header, .sidebar {
+    /*background-color: #5d6c6b;*/
+    color: white;
+    background-color: white;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#container {
+    /*width: 100%;*/
+    /*height: 100%;*/
+    margin-top: 2em;
+    margin-left: 12%;
+    margin-right: 15%;
+}
+
+#canvasContainer, #paint {
+
+    position: relative;
+    width: 1000px;
+    height: 700px;
+    background-color: white;
+    /*background: url("../assets/rgba.svg") ;*/
+    background-size: 100% 100%;
+}
+
+#canvasContainer {
+    z-index: 0;
+    border: 1px solid black;
+    margin: 1em;
+    cursor: crosshair;
+    box-shadow: 0px 1px 7px rgba(0,0,0,0.5);
+}
+canvas {
+    position: absolute;
+}
+
+.flex {
+    display: flex;
+}
+.flex-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+.flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sidebar {
+    height: 100%;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+.childMargin > * {
+    margin: 0.5em 0 0.5em 0;
+}
+
+.sidebar-left {
+    position: fixed;
+    float: left;
+    left: 0;
+    top: 4em;
+    width: 14%;
+
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+.commands {
+    width: 90%;
+    padding: 1em 1em 1em 1em;
+}
+.sidebar-right {
+    position: fixed;
+    float: right;
+    right: 0;
+    top: 4em;
+    width: 15%;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+.layers {
+    width: 90%;
+    padding: 1em 1em 1em 1em;
+}
+#sidebar-right.hide, .sidebar-left.hide {
+    width: 1em;
+}
+#sidebar-right.hide > *:not(.collapse_sidebar), .sidebar-left.hide > *:not(.collapse_sidebar) {
+    width: 0;
+    display: none;
+}
+
+#layerContainer {
+    width: 100%;
+    /*border-top: 1px solid darkslategrey;*/
+    margin: 1em 0 0 0;
+}
+#layerContainer .canvasLayer:first-child {
+    border-top: 1px solid black;
+}
+
+.canvasLayer {
+    height: auto;
+    width: 98%;
+    border-bottom: 1px solid black;
+    padding: 2em 0 1em 0;
+}
+.canvasLayer:hover {
+    background-color: rgba(200,200,200,0.5);
+}
+
+.visible {
+    display: block;
+}
+
+.invisible {
+    display: none;
+}
+
+.removeLayers {
+    position: relative;
+    float: right;
+}
+
+.float-left {
+    position: relative;
+    float: left;
+}
+.float-right {
+    position: relative;
+    float: right;
+}
+.height-100 {
+    height: 100%;
+}
+.border-left {
+    border-left: 1px solid rgba(0,0,0,0.1);
+}
+.border-right {
+    border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+.transition {
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+}
