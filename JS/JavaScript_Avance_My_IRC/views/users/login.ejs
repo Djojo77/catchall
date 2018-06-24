@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<% include ../head.ejs %>
+<body>
+    <% include ../navbar.ejs %>
+
+    <div class="login container">
+        <form class="form-horizontal col-sm-12" role="form" method="post">
+
+            <div class="form-group">
+                <div class="alert" role="alert" id="msgDiv"></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="email"><strong>Email</strong></label>
+                <div class="col-sm-3">
+                    <input class="form-control" id="email" type="email" placeholder="Email">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="password"><strong>Password</strong></label>
+                <div class="col-sm-3">
+                    <input class="form-control" id="password" type="password" placeholder="Password">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-3 col-sm-offset-3">
+                    <button class="btn btn-primary btn-block" id="login" type="e">Login</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!--<script src="/javascripts/jquery-3.3.1.min.js"></script>-->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/app.js"></script>
+
+
+</body>
+</html>

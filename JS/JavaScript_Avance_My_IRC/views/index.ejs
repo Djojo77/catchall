@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <% include head.ejs %>
+<body>
+
+    <% include navbar.ejs %>
+
+    <% if (session) { %>
+
+        <div class="container-fluid main-content">
+            <!--<div class="row">-->
+                <!--<h2 class="col-sm-10">Chat</h2>-->
+            <!--</div>-->
+
+            <div class="row chat-container">
+
+                <div class="col-sm-2 channelContainer">
+                    <header class="titleContainer flex-center-center">
+                        <h5>Channel List</h5>
+                    </header>
+                    <div class="channelList margin-0">
+                        <!--<p class="channel active">Chat General</p>-->
+                        <% for (let i = 0; i < channels.length; i++) { %>
+                            <% active = (i === 0) ? 'active' : ''; %>
+                            <p class="channel <%= active %>" data-channelID="<%= channels[i]._id %>">
+                                <%= channels[i].channelName %>
+                            </p>
+                        <% } %>
+                    </div>
+                    <form id="addChannel">
+                        <input id="channelName" type="text" placeholder="Add Channel"/>
+                        <button type="button" id="addChannelBtn" class="btn btn-light">Add Channel</button>
+                    </form>
+                </div>
+
+                <div class="col-sm-10 chatBox padding-0">
+                    <div class="messageContainer row margin-0" id="messageContainer">
+                        <% for (let i = 0; i < channels.length; i++) { %>
+                            <% active = (i === 0) ? 'active' : ''; %>
+                            <ul id="<%= channels[i]._id %>" data-name="<%= channels[i].channelName%>" class="messages col-sm-12 <%= active%>">
+                            </ul>
+                        <% } %>
+                    </div>
+                    <form action="" class="flex">
+                        <label for="m" id="user_id" class="margin-10"> <%= username %> : </label>
+                        <input id="m" autocomplete="off"><button id="mBtn" value="<%= channels[0]._id %>">Send</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    <% } %>
+    <!--<script src="/javascripts/jquery-3.3.1.min.js"></script>-->
+    <script src="/javascripts/app.js"></script>
+    <% if (session) { %>
+        <script src="/javascripts/chat.js"></script>
+    <% } %>
+
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  padding: 0 !important;
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.navbar-dark2 {
+  background-color: #457575;
+}
+
+.flex {
+  display: flex;
+}
+.flex-centerX {
+  display: flex;
+  justify-content: center;
+}
+.flex-centerY {
+  display: flex;
+  align-items: center;
+}
+.flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.margin-b-50 {margin-bottom: 50px;}
+.margin-b-30 {margin-bottom: 30px;}
+.margin-b-20 {margin-bottom: 20px;}
+.margin-b-10 {margin-bottom: 10px;}
+
+.margin-50 {margin: 50px;}
+.margin-30 {margin: 30px;}
+.margin-20 {margin: 20px;}
+.margin-10 {margin: 10px;}
+
+.margin-0 {margin: 0 !important;}
+.padding-0 {padding: 0 !important;}
+
+.main-content {
+  margin: 0;
+  padding: 0 !important;
+  height: 90%;
+}
+.chat-container {
+  margin: 0;
+  padding: 0 !important;
+  height: 100%;
+}
+
+.chatBox {
+  height: 100%;
+}
+.messageContainer {
+  height: 90%;
+  width: 100%;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  overflow-y: scroll;
+  overflow-wrap: break-word;
+}
+.msg > * {
+  margin: 0 0 0 0.5em;
+}
+.textMsg {
+  width: 85%;
+}
+.authorMsg {
+  max-width: 30%;
+}
+#m {width: 85%;}
+
+.channelContainer {
+  padding-right: 0 !important;
+  background-color: darkslategrey;
+  color: white;
+  height: 100%;
+  display: table;
+  border-right: 1px solid darkslategrey;
+  border-bottom: 1px solid darkslategrey;
+}
+.channelList {
+  display: table-row;
+  border-top: 1px solid black;
+  margin-bottom: 0.5em;
+}
+.channel {
+  border-bottom: 1px solid darkgrey;
+  margin: 0;
+  padding: 0.5em;
+}
+.channel:hover { background: rgba(255,255,255,0.5); font-weight: bolder; }
+.channel.active { background: rgba(255,255,255,0.9); color: black; font-weight: bolder; }
+
+.messages {
+  display: none;
+}
+.messages.active {
+  display: block;
+}
+
+#addChannel {
+    display: table-row;
+    height: 4em;
+}
+#channelName {
+  padding-left: 0.5em;
+  width: 100%;
+}
+#addChannelBtn {
+  width: 100%;
+  border-radius: 0;
+}
+.titleContainer {
+  display: table-row;
+  height: 3em;
+}
+.titleContainer h5 { margin: 0; }
